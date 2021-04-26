@@ -264,11 +264,6 @@ img {
     justify-content: space-between;
 }
 
-.features{
-    width: 270px;
-    margin-right: 30px;
-}
-
 .features:last-child{
     margin-right: 0;
 }
@@ -278,6 +273,8 @@ img {
 }
 
 .features{
+    width: 270px;
+    margin-right: 30px;
     display: block;
     content: "";
     height: 120px;
@@ -285,7 +282,8 @@ img {
     background-size: auto;
     background-position: center;
     background-color: var(--secondary-bg-color);
-}
+
+ }
 
 .features:nth-child(2)::before{
     background-image: url(../images/icon/clock.svg);
@@ -299,9 +297,12 @@ img {
     background-image: url(../images/icon/astronaut.svg);
 }
 
-/* .features.icon-attention {
-    background-image: url(../images/icon/antenna.svg);
-} */
+.features .icon-feature {
+    display:flex;
+    padding: 0;
+    justify-content: center;
+    align-items: baseline;
+} 
  
 .text{
     font-size: 14px;
