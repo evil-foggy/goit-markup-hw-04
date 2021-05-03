@@ -1,6 +1,3 @@
-
-
-
 :root {
     --primary-text-color: #757575;
     --secondary-title-color: #fff; 
@@ -121,7 +118,8 @@ img {
     
 }
 
- .social-icons .social-icons-link:hover .icon{
+ .social-icons .social-icons-link:hover .icon,
+ .social-icons .social-icons-link:focus .icon{
    fill: var(--secondary-title-color);    
 } 
 
@@ -321,6 +319,10 @@ img {
 
  
 .feature-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 270px;
     height: 120px;
 
@@ -329,17 +331,38 @@ img {
 }
 
 .icon-feature{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-top: 25px;
-    margin-left: 15px;
+ 
+    margin-top: 70px;
+    margin-left: 70px;
 }
 
 .text{
     font-size: 14px;
     line-height: 1.71;
+}
+
+.label-img{
+    position: relative;
+}
+
+.label{
+    display: block;
+    position: absolute;
+
+    left: 215px;
+    top: 1435px;
+    background-color: rgba(47, 48, 58, 0.8);
+
+}
+.text-label{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
 }
 
 .name-title{
@@ -477,7 +500,8 @@ a {
     border-radius: 50%;
 }
 
- .footer-social .footer-social-icons-link:hover {
+ .footer-social .footer-social-icons-link:hover,
+ .footer-social .footer-social-icons-link:focus {
     width: 44px;
     height: 44px;
 
@@ -709,4 +733,21 @@ address{
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.backdrop .is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+    background-color: currentColor;
 }
